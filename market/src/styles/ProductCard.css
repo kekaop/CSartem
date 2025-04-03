@@ -8,6 +8,7 @@
 .item-list {
     display: flex;
     margin-top: 32px;
+    padding: 10px;
 }
 .item-card {
     position: relative;
