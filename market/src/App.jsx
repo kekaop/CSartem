@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import './styles/ProductCard.css'
+import ProductCard from './components/ProductCard/ProductCard'
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+const CardData = [
+  {
+      servers : [ 1 ],
+      type : "VIP",
+      title : "⭐ HYPERSPACE⭐ ",
+      btn_text: "599 SC/Месяц",
+      prices : {
+          599: 43200,
+          59: 1440
+      },
+      color: "#ff63e2",
+      img: "/card-placeholder.jpg",
+      features: {
+          "bhop" : {
+              "title" : "Баннихоп",
+              "description" : "Через 2сек. после начала раунда. Макс. скорость: 420",
+          },
+          "hp" : {
+              "title" : "Доп. ХП",
+              "description" : "115 ХП",
+          },
+          "armor" : {
+              "title" : "Доп. Броня",
+              "description" : "130 Брони",
+          }
+      }
+  }]
+  function App() {
+    return (
+      <div className="card-list">
+        {CardData.map((card, index) => (
+          <ProductCard key={index} data={card} />
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App
+    );
+  }
+  
+  export default App;
+  

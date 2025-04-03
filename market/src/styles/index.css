@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+html {
+    font-family: "Nunito", sans-serif ;
+    font-weight: 600;
+}
+body {
+    color: var(--text);
+    background: var(--bg);
+}
+::selection {
+    background: var(--selection);
+}
+::-moz-selection {
+    background: var(--selection);
+}
+
+.content {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+a, a span {
+    color: var(--text);
+    transition: all 0.25s;
+}
+a:hover, a:hover span {
+    color: var(--text-shadowed);
+}
