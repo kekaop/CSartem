@@ -1,0 +1,24 @@
+.server-list {
+    display: flex;
+    gap: 16px;
+}
+
+.server-list-item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background: var(--bg2);
+    border: 1px solid var(--bg3);
+    border-radius: 24px;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.server-list-item.active {
+    background: var(--bg3);
+}
+
+.server-list-item:hover {
+    background: var(--bg3);
+}
