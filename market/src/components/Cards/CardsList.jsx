@@ -1,3 +1,5 @@
+import "./Cards.css"
+
 export default function CardsList({ items, selectedServer }) {
     const datas = [
         {
